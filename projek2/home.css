@@ -1,0 +1,165 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #b3b3b3;
+    min-height: 100vh;
+}
+
+/* Felső zöld fejléc */
+.top-header {
+    background-color: #12b144;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    border-bottom: 2px solid #0e8f36;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-icon {
+    font-size: 28px;
+}
+
+.logo-text {
+    font-weight: bold;
+    color: #333;
+    font-size: 11px;
+    letter-spacing: 1px;
+    margin-top: -2px;
+}
+
+.auth-section {
+    color: #0e6b27;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Szürke navigáció */
+.main-nav {
+    background-color: #595959;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 12px;
+}
+
+.nav-btn {
+    background-color: #e6e6e6;
+    color: #333;
+    border: none;
+    padding: 8px 30px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+    transition: background 0.2s;
+}
+
+.nav-btn:hover {
+    background-color: #ffffff;
+}
+
+.nav-btn.active {
+    background-color: #ffffff;
+    font-weight: bold;
+    box-shadow: none;
+}
+
+/* Fő tartalom */
+.main-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Oldal váltás logika */
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+}
+
+/* Nagy fehér üdvözlő doboz */
+.welcome-box {
+    background-color: #e6e6e6;
+    border: 2px solid #12b144;
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.welcome-box h1 {
+    font-size: 28px;
+    color: #000;
+    margin-bottom: 25px;
+}
+
+.welcome-box p {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+    text-align: justify;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Kártyák elrendezése */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.info-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 5px 5px 0px rgba(0,0,0,0.15);
+    border: 1px solid #d9d9d9;
+}
+
+.card-icon {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    font-size: 18px;
+    color: #000;
+    margin-bottom: 15px;
+}
+
+.info-card p {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.info-card .sub {
+    color: #666;
+}
+
+/* Reszponzivitás mobilon */
+@media (max-width: 768px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+    .top-header {
+        padding: 10px 20px;
+    }
+}

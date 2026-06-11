@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodFair - Főoldal</title>
+    <link rel="stylesheet" href="home.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="logo-container">
+            <div class="logo-icon">🧺</div>
+            <div class="logo-text">FOODFAIR</div>
+        </div>
+        <div class="auth-section">
+            <span>👤 BEJELENTKEZÉS / REGISZTRÁCIÓ</span>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <button class="nav-btn active" >Home</button>
+        <button class="nav-btn" ><a href="termekek.html">Termékek</a></button>
+        <button class="nav-btn" >Rólunk</button>
+    </nav>
+
+    <main class="main-content">
+        
+        <section id="page-home" class="page-section active">
+            <div class="welcome-box">
+                <h1>Üdvözöljük a FoodFair weboldalán!</h1>
+                <p>
+                    A Foodfair története egy kis családi álomból indult. 2018-ban két jó barát, Fodor Márk és 
+                    Fábián Levente úgy döntöttek, hogy létrehoznak egy olyan boltot, ahol a vásárlók nemcsak 
+                    minőségi élelmiszereket találnak, hanem barátságos, otthonos hangulatot is. A név a 
+                    vezetékneveik első szótagjaiból született: „Food” az ételek szeretetét, míg a „fair” a 
+                    családias gyökereket jelképezi.
+                </p>
+            </div>
+
+            <div class="info-grid">
+                <div class="info-card">
+                    <div class="card-icon pin">📍</div>
+                    <h3>Üzletünk</h3>
+                    <p>1061 Budapest, Andrássy út 12.</p>
+                    <p class="sub">Nyitvatartás: H-Szo: 8:00 - 20:00</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon phone">📞</div>
+                    <h3>Kapcsolat</h3>
+                    <p>Telefon: +36 1 234 5678</p>
+                    <p class="sub">E-mail: info@foodfair.hu</p>
+                </div>
+                <div class="info-card">
+                    <div class="card-icon car">🚗</div>
+                    <h3>Kiszállítás</h3>
+                    <p>Ingyenes kiszállítás 5000 Ft felett!</p>
+                    <p class="sub">Szállítási idő: 30-60 perc</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="page-products" class="page-section">
+            <div class="welcome-box">
+                <h1>Termékeink</h1>
+                <p>Friss, minőségi élelmiszerek közvetlenül a beszállítóktól.</p>
+            </div>
+        </section>
+
+        <section id="page-about" class="page-section">
+            <div class="welcome-box">
+                <h1>Rólunk</h1>
+                <p>Ismerje meg a FoodFair alapítóit és küldetését.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function switchPage(pageId) {
+            // Összes szekció és gomb elrejtése/deaktiválása
+            document.querySelectorAll('.page-section').forEach(sec => sec.classList.remove('active'));
+            document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+            
+            // Kiválasztott aktiválása
+            document.getElementById('page-' + pageId).classList.add('active');
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
